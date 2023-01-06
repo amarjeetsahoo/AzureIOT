@@ -9,17 +9,57 @@ namespace AzureIOT.Repositories
     {
         public static RegistryManager registryManager;
         private static string connStringIotHub = "";
-        public static async Task AddDeviceAsync(string deviceName)
+
+        public static async Task AddDeviceAsync(string deviceId)
         {
-            if (string.IsNullOrEmpty(deviceName))
+            if (string.IsNullOrEmpty(deviceId))
             {
-                throw new ArgumentNullException("noDeviceName");
+                throw new ArgumentNullException("noDeviceId");
             }
 
             Device device;
             registryManager = RegistryManager.CreateFromConnectionString(connStringIotHub);
-            device = await registryManager.AddDeviceAsync(new Device(deviceName));
+            device = await registryManager.AddDeviceAsync(new Device(deviceId));
             return;
+        }
+
+        public static async Task<Device> GetDeviceAsync(string deviceId)
+        {
+            if (string.IsNullOrEmpty(deviceId))
+            {
+                throw new ArgumentNullException("noDeviceId");
+            }
+
+            Device device;
+            registryManager = RegistryManager.CreateFromConnectionString(connStringIotHub);
+            device = await registryManager.GetDeviceAsync(deviceId);
+            return device;
+        }
+
+        public static async Task DeleteDeviceAsync(string deviceId)
+        {
+            if (string.IsNullOrEmpty(deviceId))
+            {
+                throw new ArgumentNullException("noDeviceId");
+            }
+
+            registryManager = RegistryManager.CreateFromConnectionString(connStringIotHub);
+            await registryManager.RemoveDeviceAsync(deviceId);
+        }
+
+        public static async Task<Device> UpdateDeviceAsync(string deviceId)
+        {
+            if (string.IsNullOrEmpty(deviceId))
+            {
+                throw new ArgumentNullException("noDeviceId");
+            }
+
+            Device device;
+            registryManager = RegistryManager.CreateFromConnectionString(connStringIotHub);
+            device=await registryManager.GetDeviceAsync(deviceId);
+            device.StatusReason = "UpdatedSuccessfully";
+            device = await registryManager.UpdateDeviceAsync(device);
+            return device;
         }
     }
 }
