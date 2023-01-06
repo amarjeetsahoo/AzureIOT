@@ -5,11 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.32" />
     <PackageReference Include="Microsoft.Azure.Devices" Version="1.38.2" />
+    <PackageReference Include="Microsoft.Azure.Devices.Client" Version="1.41.3" />
   </ItemGroup>
 
 
