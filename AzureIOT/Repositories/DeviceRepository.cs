@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices;
-using Microsoft.Azure.Devices.Common.Exceptions;
 
 namespace AzureIOT.Repositories
 {
     public class DeviceRepository
     {
         public static RegistryManager registryManager;
-        private static string connStringIotHub = "";
+        private static string connStringIotHub = "HostName=iothub-ahs230106.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=Otw960op8OFo/UHxHAz2fl/FdOV5pqwg6mHLmjarD8o=";
 
         public static async Task AddDeviceAsync(string deviceId)
         {
