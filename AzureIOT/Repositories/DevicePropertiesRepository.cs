@@ -9,11 +9,11 @@ namespace AzureIOT.Repositories
 {
     public class DevicePropertiesRepository
     {
-        private static string connStringIotHub = "HostName=iothub-ahs230106.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=Otw960op8OFo/UHxHAz2fl/FdOV5pqwg6mHLmjarD8o=";
+        private static string connStringIotHub = "HostName=iothub-ahs230107.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=12aNxV/0+wXiN8efYUzcY2JyyGybnDISK0WGMY5zabQ=";
         public static RegistryManager registryManager = RegistryManager.CreateFromConnectionString(connStringIotHub);
 
         public static DeviceClient client;
-        private static string connStringDevice = "HostName=iothub-ahs230106.azure-devices.net;DeviceId=sensor-th-0001;SharedAccessKey=oDkTNpOTtmhjWqnDN7gF6ALGtzZpDSekY/bsKfSzMUg=";
+        private static string connStringDevice = "HostName=iothub-ahs230107.azure-devices.net;DeviceId=sensor-th-0001;SharedAccessKey=MT0CRXhxV9fzO3JWV4Yvye9bmwQf1kXBrSgWuisVDC8=";
 
         public static async Task UpdateReportedPropertiesAsync(string deviceId, Properties properties)
         {
@@ -50,7 +50,7 @@ namespace AzureIOT.Repositories
                 desiredProperties = new TwinCollection();
                 telemetryConfig = new TwinCollection();
                 var device = await registryManager.GetTwinAsync(deviceId);
-                telemetryConfig["temperature"] = "36°C";
+                telemetryConfig["temperature"] = 39.56756856;
                 desiredProperties["telemetryConfig"] = telemetryConfig;
                 device.Properties.Desired["telemetryConfig"] = telemetryConfig;
 
