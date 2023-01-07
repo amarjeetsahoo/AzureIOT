@@ -9,9 +9,9 @@ namespace AzureIOT.Controllers
     public class SendTelemetryController : ControllerBase
     {
         [HttpPost("SendTelemetryMessage")]
-        public async Task SendMessage(string deviceName)
+        public async Task SendMessage(string deviceId)
         {
-            await SendTelemetryRepository.SendMessage(deviceName);
+            await SendTelemetryRepository.SendMessage(deviceId);
             return;
         }
     }
