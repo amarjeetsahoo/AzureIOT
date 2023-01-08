@@ -3,7 +3,6 @@ using AzureIOT.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Devices.Shared;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 
 namespace AzureIOT.Controllers
 {
