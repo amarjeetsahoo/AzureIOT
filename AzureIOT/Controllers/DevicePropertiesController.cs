@@ -11,7 +11,7 @@ namespace AzureIOT.Controllers
     public class DevicePropertiesController : ControllerBase
     {
         [HttpPut("UpdateReportedProperty")]
-        public async Task UpdateDeviceReportedProperty(string deviceId, Properties properties )
+        public async Task UpdateDeviceReportedProperty(string deviceId, DevicePropertiesModel properties )
         {
             await DevicePropertiesRepository.UpdateReportedPropertiesAsync(deviceId, properties);
             return;

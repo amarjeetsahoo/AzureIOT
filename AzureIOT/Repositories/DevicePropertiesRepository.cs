@@ -15,7 +15,7 @@ namespace AzureIOT.Repositories
         public static DeviceClient client;
         private static string connStringDevice = "HostName=iothub-ahs230107.azure-devices.net;DeviceId=sensor-th-0001;SharedAccessKey=MT0CRXhxV9fzO3JWV4Yvye9bmwQf1kXBrSgWuisVDC8=";
 
-        public static async Task UpdateReportedPropertiesAsync(string deviceId, Properties properties)
+        public static async Task UpdateReportedPropertiesAsync(string deviceId, DevicePropertiesModel properties)
         {
             if (string.IsNullOrEmpty(deviceId))
             {
