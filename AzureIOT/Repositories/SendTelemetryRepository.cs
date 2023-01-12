@@ -22,7 +22,7 @@ namespace AzureIOT.Repositories
             {
                 registryManager = RegistryManager.CreateFromConnectionString(connStringIotHub);
                 var device = await registryManager.GetTwinAsync(deviceId);
-                Properties properties = new Properties();
+                DevicePropertiesModel properties = new DevicePropertiesModel();
                 TwinCollection Prop;
                 Prop = device.Properties.Reported;
                 client = DeviceClient.CreateFromConnectionString(connStringDevice,
