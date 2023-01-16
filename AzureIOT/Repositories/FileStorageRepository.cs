@@ -10,7 +10,7 @@ namespace AzureIOT.Repositories
 {
     public class FileStorageRepository
     {
-        private static string connStringStorage = "DefaultEndpointsProtocol=https;AccountName=storageahs230110;AccountKey=buHWC5vilDf2/wGLRdtY+gI0Qk5yrgmJjHv/2qU3iFHBBKmmnBUZhaapnQoXV2R9R3EMxnnM9dHy+AStko7+3A==;EndpointSuffix=core.windows.net";
+        private static string connStringStorage = "";
         private static ShareServiceClient serviceClient;
 
         public static async Task CreateFileShare(string fileShareName)

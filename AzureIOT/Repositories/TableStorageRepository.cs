@@ -7,7 +7,7 @@ namespace AzureIOT.Repositories
 {
     public class TableStorageRepository
     {
-        private static string connStringStorage = "DefaultEndpointsProtocol=https;AccountName=storageahs230112;AccountKey=GQBehDz8SzJuUwzzzeabojmVk7qN2U6aQXPrHgh4Msc6FhCjCQPJ3VIjjNKvAgClU7mJ01rMeXHS+ASt2iVZow==;EndpointSuffix=core.windows.net";
+        private static string connStringStorage = "";
 
         public static async Task AddTable(string tableName)
         {
