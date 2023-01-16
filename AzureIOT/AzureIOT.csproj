@@ -20,5 +20,9 @@
     <Folder Include="Downloads\Files\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
+  </ItemGroup>
+
 
 </Project>
