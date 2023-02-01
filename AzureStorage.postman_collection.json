@@ -1,0 +1,905 @@
+{
+	"info": {
+		"_postman_id": "039d7150-5efc-426f-8f19-b02c8053f8c8",
+		"name": "AzureStorage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Blob Storage",
+			"item": [
+				{
+					"name": "Add Container",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/blobstorage/AddContainer?containerName=containerahs230109",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"blobstorage",
+								"AddContainer"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "containerahs230109"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Blob Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/blobstorage/AddBlobData?containerName=containerahs230109&blobName=ahs.jpg",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"blobstorage",
+								"AddBlobData"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "containerahs230109"
+								},
+								{
+									"key": "blobName",
+									"value": "ahs.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Blob Properties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/blobstorage/GetBlobData?containerName=containerahs230109&blobName=ahs.jpg",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"blobstorage",
+								"GetBlobData"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "containerahs230109"
+								},
+								{
+									"key": "blobName",
+									"value": "ahs.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Blobs List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/blobstorage/GetBlobs?containerName=containerahs230109",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"blobstorage",
+								"GetBlobs"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "containerahs230109"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download Blob Data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/blobstorage/DownloadBlobData?containerName=containerahs230109&blobName=ahs.jpg",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"blobstorage",
+								"DownloadBlobData"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "containerahs230109"
+								},
+								{
+									"key": "blobName",
+									"value": "ahs.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blob Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/blobstorage/DeleteBlobData?containerName=containerahs230109&blobName=ahs.jpg",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"blobstorage",
+								"DeleteBlobData"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "containerahs230109"
+								},
+								{
+									"key": "blobName",
+									"value": "ahs.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Container",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/blobstorage/DeleteContainer?containerName=containerahs230109",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"blobstorage",
+								"DeleteContainer"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "containerahs230109"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File Storage",
+			"item": [
+				{
+					"name": "Create File Share",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/filestorage/CreateFileShare?fileShareName=newfileshare",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"filestorage",
+								"CreateFileShare"
+							],
+							"query": [
+								{
+									"key": "fileShareName",
+									"value": "newfileshare"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Directory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/filestorage/CreateDirectory?fileShareName=newfileshare&dirName=newDir",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"filestorage",
+								"CreateDirectory"
+							],
+							"query": [
+								{
+									"key": "fileShareName",
+									"value": "newfileshare"
+								},
+								{
+									"key": "dirName",
+									"value": "newDir"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/amarj/Desktop/testupload.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/filestorage/UploadFile?dirName=newDir&fileShareName=newfileshare",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"filestorage",
+								"UploadFile"
+							],
+							"query": [
+								{
+									"key": "dirName",
+									"value": "newDir"
+								},
+								{
+									"key": "fileShareName",
+									"value": "newfileshare"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/filestorage/GetAllFiles?dirName=newDir&fileShareName=newfileshare",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"filestorage",
+								"GetAllFiles"
+							],
+							"query": [
+								{
+									"key": "dirName",
+									"value": "newDir"
+								},
+								{
+									"key": "fileShareName",
+									"value": "newfileshare"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/filestorage/DownloadFile?dirName=newDir&fileShareName=newfileshare&fileName=testupload.txt",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"filestorage",
+								"DownloadFile"
+							],
+							"query": [
+								{
+									"key": "dirName",
+									"value": "newDir"
+								},
+								{
+									"key": "fileShareName",
+									"value": "newfileshare"
+								},
+								{
+									"key": "fileName",
+									"value": "testupload.txt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete File",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/filestorage/DeleteFile?dirName=newDir&fileShareName=newfileshare&fileName=testupload.txt",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"filestorage",
+								"DeleteFile"
+							],
+							"query": [
+								{
+									"key": "dirName",
+									"value": "newDir"
+								},
+								{
+									"key": "fileShareName",
+									"value": "newfileshare"
+								},
+								{
+									"key": "fileName",
+									"value": "testupload.txt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Directory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/amarj/Desktop/testupload.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/filestorage/DeleteDirectory?dirName=newDir&fileShareName=newfileshare",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"filestorage",
+								"DeleteDirectory"
+							],
+							"query": [
+								{
+									"key": "dirName",
+									"value": "newDir"
+								},
+								{
+									"key": "fileShareName",
+									"value": "newfileshare"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete File Share",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/filestorage/DeleteFileShare?fileShareName=newfileshare",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"filestorage",
+								"DeleteFileShare"
+							],
+							"query": [
+								{
+									"key": "fileShareName",
+									"value": "newfileshare"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Table Storage",
+			"item": [
+				{
+					"name": "Add Table",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/TableStorage/AddTable?tableName=test",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"TableStorage",
+								"AddTable"
+							],
+							"query": [
+								{
+									"key": "tableName",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Table",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\":\"\",\r\n    \"Name\":\"Amarjeet Sahoo\",\r\n    \"Department\":\"TECH\",\r\n    \"RowKey\":\"\",\r\n    \"PartitionKey\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/TableStorage/Updatetable?tableName=test",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"TableStorage",
+								"Updatetable"
+							],
+							"query": [
+								{
+									"key": "tableName",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Table Data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Amarjeet\",\r\n    \"Department\":\"IT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/TableStorage/GetTableData?tableName=test&partitionKey=test&id=a50c800a-ce5a-4abc-95d3-bba50a000b08",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"TableStorage",
+								"GetTableData"
+							],
+							"query": [
+								{
+									"key": "tableName",
+									"value": "test"
+								},
+								{
+									"key": "partitionKey",
+									"value": "test"
+								},
+								{
+									"key": "id",
+									"value": "a50c800a-ce5a-4abc-95d3-bba50a000b08"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Table Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/TableStorage/GetAllTableData?tableName=test",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"TableStorage",
+								"GetAllTableData"
+							],
+							"query": [
+								{
+									"key": "tableName",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Table Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/TableStorage/DeleteTableData?tableName=test&partitionKey=test&id=dc927f00-9785-430b-a3a3-dbc8d9a98ecd",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"TableStorage",
+								"DeleteTableData"
+							],
+							"query": [
+								{
+									"key": "tableName",
+									"value": "test"
+								},
+								{
+									"key": "partitionKey",
+									"value": "test"
+								},
+								{
+									"key": "id",
+									"value": "dc927f00-9785-430b-a3a3-dbc8d9a98ecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Table Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/TableStorage/GetTable?tableName=test",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"TableStorage",
+								"GetTable"
+							],
+							"query": [
+								{
+									"key": "tableName",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Table",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/TableStorage/DeleteTable?tableName=test",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"TableStorage",
+								"DeleteTable"
+							],
+							"query": [
+								{
+									"key": "tableName",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Queue Storage",
+			"item": [
+				{
+					"name": "Add Queue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/queuestorage/AddQueue?queueName=dummyqueue",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"queuestorage",
+								"AddQueue"
+							],
+							"query": [
+								{
+									"key": "queueName",
+									"value": "dummyqueue"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Queue Msg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/queuestorage/InsertMessage?queueName=dummyqueue&msg=Welcome to Queue Storage",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"queuestorage",
+								"InsertMessage"
+							],
+							"query": [
+								{
+									"key": "queueName",
+									"value": "dummyqueue"
+								},
+								{
+									"key": "msg",
+									"value": "Welcome to Queue Storage"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peek Queue Msg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/queuestorage/PeekMessage?queueName=dummyqueue&peekValue=10",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"queuestorage",
+								"PeekMessage"
+							],
+							"query": [
+								{
+									"key": "queueName",
+									"value": "dummyqueue"
+								},
+								{
+									"key": "peekValue",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Queue Msg",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/queuestorage/UpdateMessage?queueName=dummyqueue&updatedMsg=Modified Message Test",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"queuestorage",
+								"UpdateMessage"
+							],
+							"query": [
+								{
+									"key": "queueName",
+									"value": "dummyqueue"
+								},
+								{
+									"key": "updatedMsg",
+									"value": "Modified Message Test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Queue Msg",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/queuestorage/DequeueMessage?queueName=dummyqueue",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"queuestorage",
+								"DequeueMessage"
+							],
+							"query": [
+								{
+									"key": "queueName",
+									"value": "dummyqueue"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Queue",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/queuestorage/DeleteQueue?queueName=dummyqueue",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"queuestorage",
+								"DeleteQueue"
+							],
+							"query": [
+								{
+									"key": "queueName",
+									"value": "dummyqueue"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "https://localhost:44360/api",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "baseurl",
+			"value": "20.241.141.79/api",
+			"type": "default"
+		}
+	]
+}
